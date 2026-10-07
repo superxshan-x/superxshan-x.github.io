@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>夫妻性生活内参</title>
+  <meta name="description" content="李宏军编著《夫妻性生活内参》全书导读。五章一附录，版式参考 cz.fate.red。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/reader.css">
+</head>
+<body>
+  <div class="Layout" id="app">
+    <header class="VPNav">
+      <div class="VPNavBar">
+        <div class="wrapper">
+          <a class="VPNavBarTitle" href="#/">夫妻性生活内参</a>
+          <div class="nav-right">
+            <nav class="VPNavBarMenu" aria-label="主导航">
+              <a class="VPNavBarMenuLink" data-nav="home" href="#/">首页</a>
+              <a class="VPNavBarMenuLink" data-nav="read" href="#/s01">开始阅读</a>
+              <a class="VPNavBarMenuLink" data-nav="app" href="#/app01">附录</a>
+            </nav>
+            <div class="VPSocialLinks">
+              <a class="VPSocialLink" href="https://x.com/orzooooo" target="_blank" rel="noopener" aria-label="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+              </a>
+            </div>
+            <button class="VPSwitchAppearance" type="button" role="switch" aria-label="外观" id="themeToggle">
+              <span class="check">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+              </span>
+            </button>
+            <button class="hamburger" type="button" aria-label="目录" id="menuBtn">☰</button>
+          </div>
+        </div>
+      </div>
+      <div class="nav-divider"></div>
+    </header>
+
+    <div class="home" id="homeView">
+      <div class="hero">
+        <div>
+          <h1 class="heading">
+            <span class="name">夫妻性生活内参</span>
+            <span class="text">协和名医谈两性健康</span>
+          </h1>
+          <p class="tagline">李宏军 编著 · 全书导读 · 五章一附录</p>
+          <div class="hero-actions">
+            <a class="VPButton brand" href="#/s01">开始阅读</a>
+            <a class="VPButton alt" href="#/app01">附录</a>
+          </div>
+        </div>
+        <div class="cover" aria-hidden="true">
+          <div class="series">协和名医谈两性健康系列</div>
+          <h2>夫妻<br>性生活<br>内参</h2>
+          <div class="author">李宏军 编著<br>中国协和医科大学出版社</div>
+        </div>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <h3>门诊式问答</h3>
+          <p>五章一附录，一百余小节，按男人、女人、双方、妻子作用和避孕分章，对应原书目录逐节阅读。</p>
+        </article>
+        <article class="feature">
+          <h3>书籍阅读版式</h3>
+          <p>版式对齐 cz.fate.red：思源宋体、暖金强调色、段首缩进、左侧目录与深浅色外观。</p>
+        </article>
+        <article class="feature">
+          <h3>导读而非原文</h3>
+          <p>原书 2017 年出版，受版权保护。本页是章节导读整理，供对照目录阅读，不能替代正版和面诊。</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="VPContent" id="readView" hidden>
+      <div class="backdrop" id="backdrop"></div>
+      <aside class="VPSidebar" id="sidebar">
+        <nav class="nav" id="sideList" aria-label="目录"></nav>
+      </aside>
+      <main class="VPDoc">
+        <div class="container">
+          <article class="content vp-doc" id="article"></article>
+          <aside class="VPDocAside">
+            <div class="outline-title">本章目录</div>
+            <div id="outline"></div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <button class="back-top" type="button" id="backTop" aria-label="返回顶部">↑</button>
+
+  <script src="assets/guide.js"></script>
+  <script src="assets/chapter1.js"></script>
+  <script src="assets/chapter2.js"></script>
+  <script src="assets/chapter3.js"></script>
+  <script src="assets/chapter4.js"></script>
+  <script src="assets/chapter5.js"></script>
+  <script src="assets/appendix.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
