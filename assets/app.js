@@ -159,9 +159,11 @@
     });
     document.title = isHome ? "夫妻性生活内参" : `${byId[id].title} | 夫妻性生活内参`;
     if (params.get("menu") !== "1") closeSidebar();
-    window.scrollTo(0, 0);
     backTop.classList.remove("show");
-    if (isHome) return;
+    if (isHome) {
+      schedulePageStart();
+      return;
+    }
 
     const idx = chapters.findIndex((c) => c.id === id);
     const item = chapters[idx];
@@ -205,6 +207,29 @@
       btn.addEventListener("click", () => {
         document.getElementById(btn.dataset.target)?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
+    });
+    schedulePageStart();
+  }
+
+  function jumpToPageStart() {
+    const html = document.documentElement;
+    const prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    } catch (_) {
+      window.scrollTo(0, 0);
+    }
+    html.scrollTop = 0;
+    document.body.scrollTop = 0;
+    html.style.scrollBehavior = prev;
+  }
+
+  function schedulePageStart() {
+    jumpToPageStart();
+    requestAnimationFrame(() => {
+      jumpToPageStart();
+      requestAnimationFrame(jumpToPageStart);
     });
   }
 

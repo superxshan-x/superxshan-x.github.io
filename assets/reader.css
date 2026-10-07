@@ -60,7 +60,6 @@
 html {
   line-height: 1.4;
   font-size: 16px;
-  scroll-behavior: smooth;
   scroll-padding-top: calc(var(--vp-nav-height) + 16px);
 }
 
